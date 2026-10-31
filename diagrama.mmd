@@ -1,0 +1,15 @@
+erDiagram
+    AUTORES ||--o{ LIVROS : "escreve"
+    AUTORES {
+        NUMBER id_autor PK
+        VARCHAR2 nome "NOT NULL"
+        VARCHAR2 nacionalidade
+    }
+    LIVROS {
+        NUMBER id_livro PK
+        VARCHAR2 titulo "NOT NULL"
+        VARCHAR2 genero "NOT NULL"
+        NUMBER preco "NOT NULL"
+        NUMBER estoque "NOT NULL"
+        NUMBER id_autor FK "NOT NULL"
+    }
